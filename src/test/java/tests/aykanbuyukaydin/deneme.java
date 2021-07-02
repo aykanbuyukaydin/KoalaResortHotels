@@ -1,4 +1,4 @@
-package tests.aykanbuyukaydin;
+package tests.giaykanbuyukaydin;
 
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
