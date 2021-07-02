@@ -8,5 +8,6 @@ public class deneme {
     @Test
     public void test(){
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
+        System.out.println("hello world");
     }
 }
