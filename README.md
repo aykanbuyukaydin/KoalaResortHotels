@@ -16,11 +16,14 @@ Github da kodlarımızı takım halinde hata almadan çalışabilmek adına dipn
 * git checkout master
 * git branch (master a gectigimzi kontrol amacli yapilabilir)
 * git pull
+
 2)Masterdan githubdaki güncel kodlari aldık ve artik kendi branch e gidip masterdaki kodlari kendi branch e çekmeliyim
 * git checkout branchismimiz
 * git branch (kendi branch mize gectigimzi kontrol amacli yapilabilir)
 * git merge master
+
 3)Branch mizde kodlari birlestirdik artik framework mizde kodlarimizi yazabiliriz
+
 4)Kodlarimizi yazdiktan sonra githuba gondermek icin
 * git add .
 * git commit -m "mesajim"
