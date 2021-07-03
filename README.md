@@ -1,6 +1,6 @@
 # KoalaResortHotels
 
-Github a kodlarımızı takım halinde hata almadan çalışabilmek adına dipnotlar ....
+Github da kodlarımızı takım halinde hata almadan çalışabilmek adına dipnotlar ....
 
 1)Öncelikle ij de frameworkuzu açtığımızda ilk olarak terminal a gidip 
        * git checkout master
@@ -20,7 +20,7 @@ Github a kodlarımızı takım halinde hata almadan çalışabilmek adına dipno
        * git checkout branchismimiz
        * git branch (kendi branch mize gectigimzi kontrol amacli yapilabilir)
        * git merge master
-3)Branch mizde kodlari birlestirdik artik framework mizde kodlarizi yazabiliriz
+3)Branch mizde kodlari birlestirdik artik framework mizde kodlarimizi yazabiliriz
 4)Kodlarimizi yazdiktan sonra githuba gondermek icin
         * git add .
         * git commit -m "mesajim"
@@ -30,4 +30,4 @@ Github a kodlarımızı takım halinde hata almadan çalışabilmek adına dipno
                                   githubdan kodlari cekmek icin tekrar bastaki adimlari takip ederiz bu dongu bu sekilde devam eder ...
 
 NOT: Kodlari github dan cekmek icin master da, kod yazacaksak kendi branch mizde oldugumuzdan emin olalim .. .
-Not: Kodlarimizi yazdiktan sonra komutlara gecmeden once save all yaptigimizdan emin olalım .. 
+NOT: Kodlarimizi yazdiktan sonra komutlara gecmeden once save all yaptigimizdan emin olalım .. 
