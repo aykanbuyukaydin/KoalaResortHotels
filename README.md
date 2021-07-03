@@ -2,7 +2,7 @@
 
 Github da kodlarımızı takım halinde hata almadan çalışabilmek adına dipnotlar ....
 
-1)Öncelikle ij de frameworkuzu açtığımızda ilk olarak terminal a gidip 
+1)Öncelikle ij de framework u açtığımızda ilk olarak terminal a gidip 
 * git checkout master
 * git branch (master a gectigimzi kontrol amacli yapilabilir)
 * git pull  
