@@ -8,8 +8,8 @@ Github da kodlarımızı takım halinde hata almadan çalışabilmek adına dipn
 * git pull  
 (git pull dedigimizde hata alıyorsak eger bizim kendi branch mizde guncel yazdigimiz kodlari githuba yuklememisiz demektir) o yuzden once;
 * git checkout branchismimiz
-       * git branch (kendi branch mize gectigimzi kontrol amacli yapilabilir)
-       * git add .
+* git branch (kendi branch mize gectigimzi kontrol amacli yapilabilir)
+* git add .
        * git commit -m "mesajim"
        * git push
    (simdi artik master branch e gecebilirim)
