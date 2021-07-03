@@ -4,10 +4,10 @@ Github da kodlarımızı takım halinde hata almadan çalışabilmek adına dipn
 
 1)Öncelikle ij de frameworkuzu açtığımızda ilk olarak terminal a gidip 
 * git checkout master
-       * git branch (master a gectigimzi kontrol amacli yapilabilir)
-       * git pull  
-   (git pull dedigimizde hata alıyorsak eger bizim kendi branch mizde guncel yazdigimiz kodlari githuba yuklememisiz demektir) o yuzden once;
-       * git checkout branchismimiz
+* git branch (master a gectigimzi kontrol amacli yapilabilir)
+* git pull  
+(git pull dedigimizde hata alıyorsak eger bizim kendi branch mizde guncel yazdigimiz kodlari githuba yuklememisiz demektir) o yuzden once;
+* git checkout branchismimiz
        * git branch (kendi branch mize gectigimzi kontrol amacli yapilabilir)
        * git add .
        * git commit -m "mesajim"
