@@ -33,4 +33,5 @@ Github da kodlarımızı takım halinde hata almadan çalışabilmek adına dipn
                  githubdan kodlari cekmek icin tekrar bastaki adimlari takip ederiz bu dongu bu sekilde devam eder ...
 
 NOT: Kodlari github dan cekmek icin master da, kod yazacaksak kendi branch mizde oldugumuzdan emin olalim .. .
+
 NOT: Kodlarimizi yazdiktan sonra komutlara gecmeden once save all yaptigimizdan emin olalım .. 
