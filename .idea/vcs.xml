@@ -5,9 +5,13 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 =======
 <<<<<<< HEAD
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+=======
+<<<<<<< HEAD
     <mapping directory="" vcs="Git" />
 =======
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+>>>>>>> master
 >>>>>>> master
 >>>>>>> master
   </component>
