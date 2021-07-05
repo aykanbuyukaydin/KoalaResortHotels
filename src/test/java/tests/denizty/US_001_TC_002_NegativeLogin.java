@@ -21,7 +21,7 @@ public class US_001_TC_002_NegativeLogin {
 
        // (loginPages.negativeLoginMessage + "/" + loginPages.loggedInUser);
 
-       // Assert.assertEquals(loginPages.negativeLoginMessage.getText() ,ConfigReader.getProperty("negativeLoginMessage"));
+       Assert.assertEquals(loginPages.negativeLoginMessage.getText() ,ConfigReader.getProperty("negativeLoginMessage"));
 
     }
 
