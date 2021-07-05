@@ -1,8 +1,11 @@
 package tests.mine;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.mine.US_003pages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -19,15 +22,45 @@ public class MineClass {
 9-sol tarafta bulunan Hotel Management butonuna tıklar
 10-Hotel List, Hotel Rooms ve Room rezervations yazılarını görüntüler
      */
-
+    US_003pages page=new US_003pages();
     @Test
     public void test01(){
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
+
+        page.logInButonu.click();
+
+        page.nameTextBox.sendKeys(ConfigReader.getProperty("kr_valid_username"));
+
+        page.passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
+
+        page.secondLogIn.click();
+
+        Assert.assertTrue(page.managerButonu.isDisplayed());
+
+        page.hotelManagement.click();
+
+        Assert.assertTrue(page.hotelList.isDisplayed());
+
+        Assert.assertTrue(page.hotelRooms.isDisplayed());
+
+        Assert.assertTrue(page.hotelRooms.isDisplayed());
     }
 
-    @Test
-    public void test02(){
-        Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
@@ -39,4 +72,4 @@ public class MineClass {
 
 
 
-}
+
