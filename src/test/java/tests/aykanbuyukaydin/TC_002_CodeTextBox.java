@@ -28,6 +28,8 @@ public class TC_002_CodeTextBox {
 
         managerPage.codeTextBox.sendKeys(ConfigReader.getProperty("ch_code_data"));
 
+        System.out.println("data" + managerPage.codeTextBox.isEnabled());
+
 
 
 
