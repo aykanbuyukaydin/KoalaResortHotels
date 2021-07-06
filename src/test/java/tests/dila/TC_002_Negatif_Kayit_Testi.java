@@ -1,10 +1,9 @@
 package tests.dila;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.RegistrationPage;
+import pages.dila.RegistrationPage;
 import pages.aykanbuyukaydin.HomePage;
 import pages.aykanbuyukaydin.LoginPage;
 import utilities.ConfigReader;
