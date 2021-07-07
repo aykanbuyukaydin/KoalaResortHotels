@@ -2,9 +2,11 @@ package tests.denizty;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.deniz.LoginPages;
+import pages.denizty.LoginPages;
 import utilities.ConfigReader;
 import utilities.Driver;
+
+import java.sql.SQLOutput;
 
 public class US_001_TC_002_NegativeLogin {
 
@@ -19,9 +21,10 @@ public class US_001_TC_002_NegativeLogin {
         loginPages.PasswordText.sendKeys(ConfigReader.getProperty("kr_invalid_passwordTC_002"));
         loginPages.btnSubmitButton.click();
 
-       // (loginPages.negativeLoginMessage + "/" + loginPages.loggedInUser);
-
-       Assert.assertEquals(loginPages.negativeLoginMessage.getText() ,ConfigReader.getProperty("negativeLoginMessage"));
+      System.out.println( loginPages.negativeLoginMessage.getText());
+      System.out.println(ConfigReader.getProperty("negativeLoginMessage").substring(0,16));
+      Assert.assertEquals(loginPages.negativeLoginMessage.getText().substring(0,16) ,ConfigReader.getProperty("negativeLoginMessage").substring(0,16));
+      Driver.closeDriver();
 
     }
 
