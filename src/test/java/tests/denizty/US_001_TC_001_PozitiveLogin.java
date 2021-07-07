@@ -2,7 +2,7 @@ package tests.denizty;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.deniz.LoginPages;
+import pages.denizty.LoginPages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -20,7 +20,7 @@ public class US_001_TC_001_PozitiveLogin {
         loginPages.btnSubmitButton.click();
 
         Assert.assertEquals(loginPages.loggedInUser.getText() ,ConfigReader.getProperty("kr_valid_username"));
-
+        Driver.closeDriver();
     }
 
 }

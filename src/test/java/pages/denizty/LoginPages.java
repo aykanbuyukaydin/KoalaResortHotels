@@ -1,4 +1,4 @@
-package pages.deniz;
+package pages.denizty;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,7 +30,11 @@ public class LoginPages{
     @FindBy (xpath = "/html/body/div[1]/div/div[2]/ul/li/a/span")
     public WebElement loggedInUser;
 
-    @FindBy   (xpath ="//*[@id=divMessageResult]/div/span")
+
+    //*[@id="divMessageResult"]/div/ul/li
+    //@FindBy (xpath = "//*[@id=/divMessageResult/]/div/ul/li/text()")
+    //@FindBy   (id= "divMessageResult")
+    @FindBy   (className="validation-summary-errors")
     public WebElement negativeLoginMessage;
 
 
