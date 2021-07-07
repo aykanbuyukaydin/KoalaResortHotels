@@ -1,5 +1,6 @@
 package tests.aykanbuyukaydin;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.aykanbuyukaydin.HomePage;
 import pages.aykanbuyukaydin.LoginPage;
@@ -24,5 +25,12 @@ public class TC_004_AddressTextBox {
         managerPage.hotelManagementButonu.click();
         managerPage.hotelListButonu.click();
         managerPage.addHotelButonu.click();
+
+        managerPage.addressTextBox.sendKeys(ConfigReader.getProperty("ch_address_data"));
+        //icine data girmeye gerek yoktu bu text boxa erisilebiliyor mu diye ama testcase de data girin demis o yuzden yazdim
+
+        Assert.assertTrue(managerPage.addressTextBox.isEnabled());
+
+        Driver.closeDriver();
     }
 }

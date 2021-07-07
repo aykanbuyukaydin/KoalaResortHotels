@@ -1,5 +1,8 @@
 package tests.aykanbuyukaydin;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.aykanbuyukaydin.HomePage;
 import pages.aykanbuyukaydin.LoginPage;
@@ -25,11 +28,16 @@ public class TC_007_IDGroupDropDrown {
         managerPage.hotelListButonu.click();
         managerPage.addHotelButonu.click();
 
+        WebElement idGroupDropDrown = managerPage.idGroupDropDown;
+        Select select = new Select(idGroupDropDrown);
+        select.selectByVisibleText(ConfigReader.getProperty("ch_idGroupDropDrown_data"));
+
+        String actual = select.getFirstSelectedOption().getText();
+        String expected = ConfigReader.getProperty("ch_idGroupDropDrown_data");
+        Assert.assertEquals(actual,expected);
+
+        Driver.closeDriver();
+
     }
 
-    /*
-    WebElement acilirListe = driver.findElement(By.id("pc_currency"));
-        Select select = new Select(acilirListe);
-        select.selectByVisibleText("Eurozone (euro)");
-     */
 }
