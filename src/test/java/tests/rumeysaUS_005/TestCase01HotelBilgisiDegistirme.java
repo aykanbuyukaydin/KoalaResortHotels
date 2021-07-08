@@ -1,6 +1,7 @@
 package tests.rumeysaUS_005;
 
-public class TestCase01 {
+
+public class TestCase01HotelBilgisiDegistirme {
 
     /*
 
@@ -23,7 +24,13 @@ public class TestCase01 {
 
 
 
+   }
 
 
 
-}
+
+
+
+
+
+
