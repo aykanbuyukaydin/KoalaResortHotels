@@ -30,6 +30,9 @@ public class OtelListUpDatePages {
     @FindBy(xpath = "//a[@href=\"/admin/HotelAdmin\"][1]")
     public WebElement HotelList;
 
+    @FindBy(xpath = "(//a[@target='_blank'])[3]")
+    public WebElement DETAİLS;
+
 
 
 

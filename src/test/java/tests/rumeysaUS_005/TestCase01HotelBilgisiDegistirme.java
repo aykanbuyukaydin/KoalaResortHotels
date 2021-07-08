@@ -36,11 +36,15 @@ public class TestCase01HotelBilgisiDegistirme {
       otelListUpDatePages.usernameButonu.sendKeys(ConfigReader.getProperty("kr_valid_username"));
       otelListUpDatePages.passwordButonu.sendKeys(ConfigReader.getProperty("kr_valid_password"));
       otelListUpDatePages.LoginButonu2.click();
-      System.out.println("LISTOFUSERS Sayfası Açıldı..");
+      System.out.println("Login Olundu..");
 
       otelListUpDatePages.HotelManagement.click();
       otelListUpDatePages.HotelList.click();
-      System.out.println("List Of Hotels Sayfası Açıldı..");
+      System.out.println("List Of Hotels Sayfası Görüntülendi..");
+
+      otelListUpDatePages.DETAİLS.click();
+      System.out.println("DETAİLS Butonuna Tıklandı..");
+      System.out.println("Edit Hotel Sayfası Görüntülendi..");
 
 
 
