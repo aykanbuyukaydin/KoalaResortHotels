@@ -1,13 +1,20 @@
 package tests.rumeysaUS_005;
 
 
+import org.junit.Test;
+import pages.aykanbuyukaydin.HomePage;
+import pages.aykanbuyukaydin.LoginPage;
+import pages.rumeysaUS_005.OtelListUpDatePages;
+import utilities.ConfigReader;
+import utilities.Driver;
+
 public class TestCase01HotelBilgisiDegistirme {
 
     /*
 
     Menu den hotel management linkine tiklanir
     "List of hotels"sayfasi goruntulenir
-     Bilgileri degistirilmek istenen otel in "Details" butonuna tklanir
+     Bilgileri degistirilmek istenen otel in "Details" butonuna tıklanir
      "Edit hotel" sayfasi goruntulenir
       Hotel  kodu degistirilmek isteniyorsa hotel cod text alanina istenilen hotel kodu girilir
       Hotel  name degistirilmek isteniyorsa hotel name text alanina istenilen hotel name girilir
@@ -19,7 +26,38 @@ public class TestCase01HotelBilgisiDegistirme {
 
      */
 
+  @Test
+   public void test01() {
 
+
+      Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
+      OtelListUpDatePages otelListUpDatePages= new OtelListUpDatePages();
+      otelListUpDatePages.LoginButonu1.click();
+      otelListUpDatePages.usernameButonu.sendKeys(ConfigReader.getProperty("kr_valid_username"));
+      otelListUpDatePages.passwordButonu.sendKeys(ConfigReader.getProperty("kr_valid_password"));
+      otelListUpDatePages.LoginButonu2.click();
+      System.out.println("LISTOFUSERS Sayfası Açıldı..");
+
+      otelListUpDatePages.HotelManagement.click();
+      otelListUpDatePages.HotelList.click();
+      System.out.println("List Of Hotels Sayfası Açıldı..");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
 
    }
 
