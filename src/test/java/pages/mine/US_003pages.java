@@ -27,8 +27,6 @@ public class US_003pages {
     @FindBy(id = "btnSubmit")
     public WebElement secondLogIn;
 
-   // @FindBy(xpath ="/html/body/div[1]/div/div[2]/ul/li/ul")
-   //public WebElement managerButonu;
 
     @FindBy(xpath = "/html/body/div[1]/div/div[2]/ul/li")
     public WebElement managerButonu;

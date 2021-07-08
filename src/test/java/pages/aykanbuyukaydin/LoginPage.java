@@ -20,4 +20,7 @@ public class LoginPage {
 
     @FindBy(id = "btnSubmit")
     public WebElement loginButonu;
+
+    @FindBy(linkText = "Create a new account")
+    public WebElement kayitButonu;
 }
