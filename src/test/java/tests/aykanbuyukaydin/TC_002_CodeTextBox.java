@@ -27,6 +27,12 @@ public class TC_002_CodeTextBox {
         managerPage.addHotelButonu.click();
 
         managerPage.codeTextBox.sendKeys(ConfigReader.getProperty("ch_code_data"));
+        //icine data girmeye gerek yoktu bu text boxa erisilebiliyor mu diye ama testcase de data girin demis o yuzden yazdim
+
+        Assert.assertTrue(managerPage.codeTextBox.isEnabled());
+
+        Driver.closeDriver();
+
 
 
 
