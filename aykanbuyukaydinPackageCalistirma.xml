@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="aykanbuyukaydin Package Calistirma">
+    <test name="aykanbuyukaydin Tum Class'lar">
+        <packages>
+            <package name="tests.aykanbuyukaydin"></package>
+        </packages>
+    </test>
+</suite>
