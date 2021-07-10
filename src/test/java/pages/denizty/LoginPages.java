@@ -32,10 +32,22 @@ public class LoginPages{
 
 
     //*[@id="divMessageResult"]/div/ul/li
-    //@FindBy (xpath = "//*[@id=/divMessageResult/]/div/ul/li/text()")
-    //@FindBy   (id= "divMessageResult")
-    @FindBy   (className="validation-summary-errors")
+    //@FindBy (xpath = "//*[@id='divMessageResult']/div/ul/li/text()")
+
+
+    @FindBy(xpath = "//span[text()='Try again please']")
+    public WebElement girisYapilamadi;
+    // @FindBy(xpath = "//li[text()='Username or p
+    // Password is incorrect, please correct them and try again']")
+    @FindBy(xpath = "//li[contains(text(),'Username or password is incorrect')]")
+    public WebElement mesajYazisi;
+
+    @FindBy   (id= "divMessageResult")
     public WebElement negativeLoginMessage;
+
+    //@FindBy   (id= "divMessageResult")
+    //@FindBy   (className="validation-summary-errors")
+
 
 
 }
