@@ -2,11 +2,15 @@ package pages.rumeysaUS_005;
 
 import org.apache.poi.sl.usermodel.TextBox;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+
+import java.util.List;
 
 public class OtelListUpDatePages {
 
@@ -27,6 +31,18 @@ public class OtelListUpDatePages {
         System.out.println("Login Olundu..");
     }
 
+
+    public void deleteChars(WebElement element){
+        Actions actions = new Actions(Driver.getDriver());
+        actions.click(element).
+                keyDown(Keys.LEFT_CONTROL).
+                sendKeys("a").sendKeys("x").
+                keyUp(Keys.COMMAND).build().perform();
+       // actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+    }
+
+
     @FindBy(linkText = "Log in")
     public WebElement LoginButonu1;
 
@@ -39,17 +55,14 @@ public class OtelListUpDatePages {
     @FindBy(xpath = "//input[@id='btnSubmit']")
     public WebElement LoginButonu2;
 
-
-
     @FindBy(id = "menuHotels")
     public WebElement HotelManagement;
 
     @FindBy(xpath = "//a[@href=\"/admin/HotelAdmin\"][1]")
     public WebElement HotelList;
 
-    @FindBy(xpath = "(//a[@target='_blank'])[3]")
-    public WebElement DETAİLS;
-
+    @FindBy(xpath = "//a[@target='_blank']")
+    public List<WebElement> allDetailsList;
 
     @FindBy(xpath = "//input[@placeholder='Code']")
     public WebElement CodeTextBox;
