@@ -7,9 +7,9 @@ import utilities.Driver;
 
 public class LoginPage {
 
-    public LoginPage(){
+    public LoginPage() {
 
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(id = "UserName")
@@ -23,4 +23,6 @@ public class LoginPage {
 
     @FindBy(linkText = "Create a new account")
     public WebElement kayitButonu;
+
+
 }
