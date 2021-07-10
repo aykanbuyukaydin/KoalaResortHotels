@@ -17,8 +17,7 @@ public class US_001_TC_003_NegativeLogin {
         loginPages.logInButonu.click();
         loginPages.UserNameText.sendKeys(ConfigReader.getProperty("kr_invalid_usernameTC_003"));
         loginPages.PasswordText.sendKeys(ConfigReader.getProperty("kr_invalid_passwordTC_003"));
-        loginPage
-    s.btnSubmitButton.click();
+        loginPages.btnSubmitButton.click();
 
         System.out.println( loginPages.negativeLoginMessage.getText());
         System.out.println(ConfigReader.getProperty("negativeLoginMessage").substring(0,16));
