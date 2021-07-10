@@ -22,8 +22,8 @@ public class US_001_TC_002_NegativeLogin {
         loginPages.btnSubmitButton.click();
 
       System.out.println( loginPages.negativeLoginMessage.getText());
-      System.out.println(ConfigReader.getProperty("negativeLoginMessage").substring(0,16));
-      Assert.assertEquals(loginPages.negativeLoginMessage.getText().substring(0,16) ,ConfigReader.getProperty("negativeLoginMessage").substring(0,16));
+      System.out.println(ConfigReader.getProperty("negativeLoginMessage"));
+      Assert.assertEquals(loginPages.negativeLoginMessage.getText(),ConfigReader.getProperty("negativeLoginMessage"));
       Driver.closeDriver();
 
     }
