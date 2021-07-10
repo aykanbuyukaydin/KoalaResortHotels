@@ -1,4 +1,4 @@
-package pages;
+package pages.dila;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +35,29 @@ public class RegistrationPage {
     public  WebElement birthDate;
   @FindBy(xpath = "//input[@id='btnSubmit']")
     public WebElement saveButonu;
+  @FindBy(xpath = "//label[@for='UserName']")
+    public WebElement username_error;
+  @FindBy(xpath = "//label[@for='Password']")
+    public WebElement password_error;
+    @FindBy(xpath = "//label[@for='Email']")
+    public WebElement email_error;
+    @FindBy(xpath = "//label[@for='NameSurname']")
+    public WebElement fullName_error;
+    @FindBy(xpath = "//label[@for='PhoneNo']")
+    public WebElement phoneNum_error;
+    @FindBy(xpath = "//label[@for='SSN']")
+    public WebElement ssn_error;
+    @FindBy(xpath = "//label[@for='DrivingLicense']")
+    public WebElement driving_error;
+    @FindBy(xpath = "//label[@for='IDCountry']")
+    public WebElement idCountry_error;
+    @FindBy(xpath = "//label[@for='Address']")
+    public WebElement address_error;
+    @FindBy(xpath = "//label[@for='WorkingSector']")
+    public WebElement WorkingSector_error;
+    @FindBy(xpath = "//label[@for='BirthDate']")
+    public WebElement birthDate_error;
+
 
 
 }

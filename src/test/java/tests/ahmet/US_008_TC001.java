@@ -11,7 +11,7 @@ import pages.ahmet.Methods;
 import pages.ahmet.ReservationPage;
 import utilities.Driver;
 
-public class US_008 {
+public class US_008_TC001 {
     @BeforeMethod
     public void reservationSetUp() throws InterruptedException {
         Methods.logInKoalaResort();

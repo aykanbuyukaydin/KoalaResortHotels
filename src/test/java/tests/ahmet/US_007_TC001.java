@@ -11,7 +11,7 @@ import pages.ahmet.ReservationPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US_007 {
+public class US_007_TC001 {
 
     @Test
     public void TC_001() throws InterruptedException {
