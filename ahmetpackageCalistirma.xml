@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ahmet Package Calistirma">
+    <test name="ahmet Tum Class'lar">
+        <packages>
+            <package name="tests.ahmet"></package>
+        </packages>
+    </test>
+</suite>

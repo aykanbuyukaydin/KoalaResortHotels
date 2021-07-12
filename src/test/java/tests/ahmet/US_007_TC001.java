@@ -10,15 +10,20 @@ import pages.ahmet.Methods;
 import pages.ahmet.ReservationPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ahmet.TestBaseRaporAhmet;
+import utilities.aykanbuyukaydin.TestBaseRaporAykan;
 
-public class US_007_TC001 {
+public class US_007_TC001 extends TestBaseRaporAhmet {
 
     @Test
     public void TC_001() throws InterruptedException {
+        extentTest=extentReports.createTest("US__007_TC001","Room Reservation");
 
         Methods.logInKoalaResort();
+        extentTest.info("Koala Resort Login olundu");
 
         Methods.roomReservation();
+        extentTest.pass("Room Reservation gerçekleştirildi");
 
     }
 }

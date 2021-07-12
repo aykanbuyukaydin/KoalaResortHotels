@@ -13,6 +13,7 @@ public class US_001_TC_001_PozitiveLogin {
 
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
 
+
         LoginPages loginPages = new LoginPages();
         loginPages.logInButonu.click();
         loginPages.UserNameText.sendKeys(ConfigReader.getProperty("kr_valid_username"));
