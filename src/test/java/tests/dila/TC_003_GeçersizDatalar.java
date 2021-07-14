@@ -8,10 +8,13 @@ import pages.aykanbuyukaydin.LoginPage;
 import pages.dila.RegistrationPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.dila.TestBaseRaporDila;
 
-public class TC_003_GeçersizDatalar {
+public class TC_003_GeçersizDatalar extends TestBaseRaporDila {
     @Test
     public void test() {
+        extentTest=extentReports.createTest("Gecersiz ","Gecersiz Datalara goruldu");
+        Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         Driver.getDriver().get(ConfigReader.getProperty("homepage_url"));
         HomePage homePage = new HomePage();
         homePage.loginLinki.click();
@@ -45,6 +48,10 @@ public class TC_003_GeçersizDatalar {
         String expected_birthDate="This field is required.";
         String actual_birthDate=registrationPage.birthDate_error.getText();
         Assert.assertEquals(actual_birthDate,expected_birthDate);
+
+
+        extentTest.pass("gecersiz datalarla kayit yapilamadi");
+
 
 
 

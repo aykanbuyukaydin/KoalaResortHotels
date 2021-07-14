@@ -8,10 +8,13 @@ import pages.aykanbuyukaydin.HomePage;
 import pages.aykanbuyukaydin.LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.dila.TestBaseRaporDila;
 
-public class TC_002_Negatif_Kayit_Testi {
+public class TC_002_Negatif_Kayit_Testi extends TestBaseRaporDila {
     @Test
     public void test() {
+        extentTest=extentReports.createTest("Negatif","Basarili Negatif Kayit Testi Yapildi");
+        Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         Driver.getDriver().get(ConfigReader.getProperty("homepage_url"));
         HomePage homePage = new HomePage();
         homePage.loginLinki.click();
@@ -79,6 +82,7 @@ public class TC_002_Negatif_Kayit_Testi {
         Assert.assertEquals(actual_birthData,expected_birtData);
 
 
+        extentTest.pass("gecersiz datalarla kayit yapilamadi");
 
 
 
