@@ -1,28 +1,28 @@
-package pages.rumeysaUS_005;
+package pages.rumeysa;
 
-import org.apache.poi.sl.usermodel.TextBox;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.rumeysa.TestBaseRaporRumeysa;
 
 import java.util.List;
 
-public class OtelListUpDatePages {
+public class HotelListUpDatePages extends TestBaseRaporRumeysa {
 
-    public OtelListUpDatePages() {
+    public HotelListUpDatePages()  {
 
+        WebDriver driver;
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    public void LoginTesti() {
 
+    public void LoginTesti(){
+       // extentTest=extentReports.createTest("HotelBilgisiDegistirme","Hotel bilgisi guncellendi");
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
-        OtelListUpDatePages otelListUpDatePages= new OtelListUpDatePages();
+        HotelListUpDatePages otelListUpDatePages= new HotelListUpDatePages();
 
         otelListUpDatePages.LoginButonu1.click();
         otelListUpDatePages.usernameButonu.sendKeys(ConfigReader.getProperty("kr_valid_username"));
@@ -31,17 +31,15 @@ public class OtelListUpDatePages {
         System.out.println("Login Olundu..");
     }
 
-
+/*
     public void deleteChars(WebElement element){
         Actions actions = new Actions(Driver.getDriver());
         actions.click(element).
                 keyDown(Keys.LEFT_CONTROL).
                 sendKeys("a").sendKeys("x").
                 keyUp(Keys.COMMAND).build().perform();
-       // actions.sendKeys(Keys.PAGE_DOWN).perform();
-
-    }
-
+        }
+*/
 
     @FindBy(linkText = "Log in")
     public WebElement LoginButonu1;
@@ -60,6 +58,9 @@ public class OtelListUpDatePages {
 
     @FindBy(xpath = "//a[@href=\"/admin/HotelAdmin\"][1]")
     public WebElement HotelList;
+
+    @FindBy(xpath= "(//select)[1]")
+    public WebElement view1;
 
     @FindBy(xpath = "//a[@target='_blank']")
     public List<WebElement> allDetailsList;
@@ -82,10 +83,10 @@ public class OtelListUpDatePages {
     @FindBy(xpath = "//select[@name='IDGroup']")
     public WebElement GroupTextBox;
 
-    @FindBy(xpath = "//button[@class='btn green'][1]")
+    @FindBy(xpath = "(//button[@class='btn green'])[1]")
     public WebElement SAVEButonu;
 
-    @FindBy(linkText = "Hotel was updated successfully")
+    @FindBy(className = "bootbox-body")
     public WebElement UpdateSuccessfully;
 
     @FindBy(className = "btn btn-primary")
