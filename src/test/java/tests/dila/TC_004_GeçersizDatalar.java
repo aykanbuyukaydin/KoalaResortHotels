@@ -8,10 +8,13 @@ import pages.aykanbuyukaydin.LoginPage;
 import pages.dila.RegistrationPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.dila.TestBaseRaporDila;
 
-public class TC_004_GecersizDatalar {
+public class TC_004_GeçersizDatalar extends TestBaseRaporDila {
     @Test
     public void test() {
+        extentTest=extentReports.createTest("Gecersiz","Gecersiz Datalar mesaji goruldu");
+        Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         Driver.getDriver().get(ConfigReader.getProperty("homepage_url"));
         HomePage homePage = new HomePage();
         homePage.loginLinki.click();
@@ -45,6 +48,11 @@ public class TC_004_GecersizDatalar {
         String expected_phoneNo="Please enter phone number";
         String actual_phoneNo=registrationPage.phoneNum_error.getText();
         Assert.assertEquals(actual_phoneNo,expected_phoneNo);
+
+
+
+        extentTest.pass("gecersiz datalarla kayit yapilamadi");
+
 
 
 

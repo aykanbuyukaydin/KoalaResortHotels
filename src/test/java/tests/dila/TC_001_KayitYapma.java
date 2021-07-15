@@ -7,11 +7,14 @@ import pages.aykanbuyukaydin.HomePage;
 import pages.aykanbuyukaydin.LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.dila.TestBaseRaporDila;
 
-public class TC_001_KayitYapma {
+public class TC_001_KayitYapma extends TestBaseRaporDila {
 
     @Test
     public void test(){
+        extentTest=extentReports.createTest("KayitYapma","Basarili KayitYapma Yapildi");
+        Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         Driver.getDriver().get(ConfigReader.getProperty("homepage_url"));
         HomePage homePage=new HomePage();
         homePage.loginLinki.click();
@@ -19,7 +22,7 @@ public class TC_001_KayitYapma {
         loginPage.kayitButonu.click();
         RegistrationPage registrationPage=new RegistrationPage();
         registrationPage.username.sendKeys("yonetici");
-        registrationPage.password.sendKeys("yonetici");
+        registrationPage.password.sendKeys("Yyonetici4@");
         registrationPage.email.sendKeys("abc@gmail.com");
         registrationPage.fullName.sendKeys("edat eymen");
         registrationPage.phoneNo.sendKeys("5555555555");
@@ -34,10 +37,7 @@ public class TC_001_KayitYapma {
         registrationPage.birthDate.sendKeys("5/17/1989");
         registrationPage.saveButonu.click();
 
-
-
-
-
+        extentTest.pass("yeni bir hesap basarili bir sekide olusturuldu");
 
     }
 }
