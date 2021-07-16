@@ -3,9 +3,12 @@ package pages.nurcan;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.w3c.dom.html.HTMLInputElement;
 import utilities.Driver;
 
 public class US_006Pages {
+
+
 
     public  US_006Pages(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -31,8 +34,8 @@ public class US_006Pages {
     @FindBy(xpath = "//*[@id=\"Location\"]")
     public WebElement LocationText;
 
-@FindBy(xpath = "//*[@id=\"cke_1_contents\"]/textarea\n")
-public WebElement DescriptionText;
+//@FindBy(xpath = "//*[@id=\"cke_1_contents\"]/textarea\n")
+//public WebElement DescriptionText;
 
     @FindBy(id = "IDGroupRoomType")
     public WebElement RoomTypeText;
@@ -52,7 +55,14 @@ public WebElement DescriptionText;
    @FindBy(id = "Price")
     public WebElement Pricetext;
 
+    @FindBy(xpath = "//textarea[@dir='ltr']")
+    public WebElement DescriptionText;
+
+    @FindBy(xpath = "//*[text()='HotelRoom was inserted successfully']")
+    public WebElement kayitmesaji;
 
 
+    @FindBy(xpath = "/html/body/div[5]/div/div/div[2]/button")
+    public WebElement okeyButonu;
 
 }

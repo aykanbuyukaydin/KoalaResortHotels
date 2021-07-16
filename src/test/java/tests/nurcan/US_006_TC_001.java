@@ -1,5 +1,6 @@
 package tests.nurcan;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.ui.Select;
 import pages.aykanbuyukaydin.LoginPage;
@@ -8,12 +9,13 @@ import pages.denizty.LoginPages;
 import pages.nurcan.US_006Pages;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US_006_TC_001 {
 
 
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
 
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
        // https://qa-environment.koalaresorthotels.com/admin/HotelRoomAdmin
@@ -42,10 +44,27 @@ lgnpages6.btnSubmitButton.click();
        Select RoomType=new Select(uS_006Pages.RoomTypeText);
        RoomType.selectByVisibleText("Single");
 
-       uS_006Pages.MaxAdultCountText.sendKeys("2");
-       uS_006Pages.MaxChildCountText.sendKeys("3");
-       uS_006Pages.ApprovedText.isSelected();
-       uS_006Pages.SaveText.click();
+     //  uS_006Pages.MaxAdultCountText.sendKeys("2");
+     //  uS_006Pages.MaxChildCountText.sendKeys("3");
+     //  uS_006Pages.ApprovedText.isSelected();
+      // uS_006Pages.SaveText.click();
+
+        uS_006Pages.MaxAdultCountText.sendKeys("2");
+        uS_006Pages.MaxChildCountText.sendKeys("3");
+        Assert.assertEquals(uS_006Pages.ApprovedText.isSelected(),false);
+        uS_006Pages.DescriptionText.sendKeys("Deneme description");
+        uS_006Pages.SaveText.click();
+        ReusableMethods.switchToWindow("https://qa-environment.koalaresorthotels.com/admin/HotelroomAdmin/Create");
+        Thread.sleep(1000);
+
+
+       uS_006Pages.kayitmesaji.click();
+       uS_006Pages.okeyButonu.click();
+
+
+
+
+
 /*
         code=123
         name=Suit
